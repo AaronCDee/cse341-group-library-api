@@ -9,7 +9,7 @@ let db;
 async function connectDB() {
   try {
     const conn = await client.connect();
-    db = conn.db(); // TODO: update with DB here
+    db = conn.db();
   } catch (e) {
     console.error(e);
   }
