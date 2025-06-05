@@ -35,9 +35,12 @@ const createMember = async (req, res) => {
         const user = {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
+            address: req.body.address,
             email: req.body.email,
-            favoriteColor: req.body.favoriteColor,
-            birthday: req.body.birthday
+            phone: req.body.phone,
+            birthday: req.body.birthday,
+            borrowed: req.body.borrowed,
+            feeBalance: req.body.feeBalance,
         };
         const response = await mongodb.getDb().db().collection('members').insertOne(user);
         if (response.acknowledged) {
@@ -60,9 +63,12 @@ const updateMember = async (req, res) => {
         const user = {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
+            address: req.body.address,
             email: req.body.email,
-            favoriteColor: req.body.favoriteColor,
-            birthday: req.body.birthday
+            phone: req.body.phone,
+            birthday: req.body.birthday,
+            borrowed: req.body.borrowed,
+            feeBalance: req.body.feeBalance,
         };
         const response = await mongodb.getDb().db().collection('members').replaceOne({ _id: userId }, user);
         if (response.modifiedCount > 0) {

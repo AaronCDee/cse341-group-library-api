@@ -60,10 +60,13 @@
                 "email": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "phone": {
                   "example": "any"
                 },
-                "birthday": {
+                "position": {
+                  "example": "any"
+                },
+                "startDate": {
                   "example": "any"
                 }
               }
@@ -139,10 +142,13 @@
                 "email": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "phone": {
                   "example": "any"
                 },
-                "birthday": {
+                "position": {
+                  "example": "any"
+                },
+                "startDate": {
                   "example": "any"
                 }
               }
@@ -229,13 +235,22 @@
                 "lastName": {
                   "example": "any"
                 },
+                "address": {
+                  "example": "any"
+                },
                 "email": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "phone": {
                   "example": "any"
                 },
                 "birthday": {
+                  "example": "any"
+                },
+                "borrowed": {
+                  "example": "any"
+                },
+                "feeBalance": {
                   "example": "any"
                 }
               }
@@ -308,13 +323,22 @@
                 "lastName": {
                   "example": "any"
                 },
+                "address": {
+                  "example": "any"
+                },
                 "email": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "phone": {
                   "example": "any"
                 },
                 "birthday": {
+                  "example": "any"
+                },
+                "borrowed": {
+                  "example": "any"
+                },
+                "feeBalance": {
                   "example": "any"
                 }
               }
@@ -582,19 +606,19 @@
                 "ISBN": {
                   "example": "any"
                 },
-                "Title": {
+                "title": {
                   "example": "any"
                 },
-                "Author": {
+                "director": {
                   "example": "any"
                 },
-                "publicationYear": {
+                "year": {
                   "example": "any"
                 },
-                "Genre": {
+                "genre": {
                   "example": "any"
                 },
-                "Pages": {
+                "distrubitor": {
                   "example": "any"
                 },
                 "userRating": {
@@ -667,19 +691,19 @@
                 "ISBN": {
                   "example": "any"
                 },
-                "Title": {
+                "title": {
                   "example": "any"
                 },
-                "Author": {
+                "director": {
                   "example": "any"
                 },
-                "publicationYear": {
+                "year": {
                   "example": "any"
                 },
-                "Genre": {
+                "genre": {
                   "example": "any"
                 },
-                "Pages": {
+                "distrubitor": {
                   "example": "any"
                 },
                 "userRating": {

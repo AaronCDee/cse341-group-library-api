@@ -35,11 +35,11 @@ const createMovie = async (req, res) => {
     try {
         const movie = {
             ISBN: req.body.ISBN,
-            Title: req.body.Title,
-            Author: req.body.Author,
-            publicationYear: req.body.publicationYear,
-            Genre: req.body.Genre,
-            Pages: req.body.Pages,
+            title: req.body.title,
+            director: req.body.director,
+            year: req.body.year,
+            genre: req.body.genre,
+            distributor: req.body.distrubitor,
             userRating: req.body.userRating
         };
         const response = await mongodb.getDb().db().collection('movies').insertOne(movie);
@@ -62,11 +62,11 @@ const updateMovie = async (req, res) => {
         const movieId = new ObjectId(req.params.id);
         const movie = {
             ISBN: req.body.ISBN,
-            Title: req.body.Title,
-            Author: req.body.Author,
-            publicationYear: req.body.publicationYear,
-            Genre: req.body.Genre,
-            Pages: req.body.Pages,
+            title: req.body.title,
+            director: req.body.director,
+            year: req.body.year,
+            genre: req.body.genre,
+            distributor: req.body.distrubitor,
             userRating: req.body.userRating
         };
         const response = await mongodb.getDb().db().collection('movies').replaceOne({ _id: movieId }, movie);
