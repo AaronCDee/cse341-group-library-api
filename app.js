@@ -3,6 +3,8 @@ const cors           = require('cors');
 const passport       = require('passport');
 const session        = require('express-session');
 const GithubStrategy = require('passport-github2');
+const bodyParser     = require('body-parser');
+const mongodb = require('./db/conn')
 
 require('./loadEnv');
 
@@ -13,6 +15,8 @@ const PORT = process.env.PORT || 8080;
 const app  = express();
 
 app.set('trust proxy', true); // NOTE: for Swagger dynamic proto
+
+app.use(bodyParser.json());
 
 app.use(session({
   secret:            "secret",
@@ -76,4 +80,13 @@ app.use((err, _req, res, _next) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`);
+});
+
+// init mongodb
+mongodb.initDb((err) => {
+  if (err) {
+      console.log(err);
+  } else {
+      app.listen(PORT, () => {console.log(`DB is listening and node running on port ${PORT}`)});
+  }
 });
